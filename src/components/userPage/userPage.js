@@ -1,10 +1,12 @@
 import React from 'react'
 import {connect} from 'react-redux';
+import { Redirect } from "react-router-dom";
 
 const UserPage = (props) => {
-    console.log(props)
+    if (Object.keys(props.user).length === 0) return <Redirect to='/' />
+    console.log(props.user);
     return(
-        <div>{props.state}</div>
+        <div>{props.user.email}</div>
     )
 }
 

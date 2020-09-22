@@ -1,8 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux';
 import {getUsers} from "../../actions/actions";
-import {Redirect} from "react-router-dom";
-// import UserPage from "../userPage/userPage";
 
 const SignUp = (props) => {
   const {user, getUsers, history} = props
@@ -25,8 +23,9 @@ const SignUp = (props) => {
       .then(resp => resp.json())
       .then(data => {
         getUsers(data.data.user)
-        console.log(user);
-        if (!Object.keys(user).length === 0) {
+        localStorage.setItem('token', data.data.user.authentication_token)
+        console.log(localStorage.getItem('token'));
+        if (Object.keys(user).length > 0) {
           handleSuccessfullAuth()
         }
       })
