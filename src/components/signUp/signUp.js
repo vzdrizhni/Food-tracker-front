@@ -1,6 +1,9 @@
-import React, {useEffect} from 'react'
+import React from 'react'
+import { connect } from 'react-redux';
+import { getUsers } from "../../actions/actions";
 
-const SignUp = () => {
+const SignUp = (props) => {
+  const {user, getUsers} = props
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -11,18 +14,20 @@ const SignUp = () => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(user)
-    }).then(resp => resp.json())
+      body: JSON.stringify(userValue)
+    })
+    .then(resp => resp.json())
     .then(data => {
-      console.log(data.data.user);
+      getUsers(data.data.user)
+      console.log(user);
     })
   }
 
-  let user = {user: {}};
+  let userValue = {user: {}};
 
   const handleChange = (e) => {
-    user.user = Object.assign(user.user, {[e.target.name]: e.target.value })
-    console.log(JSON.stringify(user));
+    userValue.user = Object.assign(userValue.user, {[e.target.name]: e.target.value })
+    console.log(JSON.stringify(userValue));
   }
 
   return (
@@ -38,4 +43,10 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
+const mapStateToProps = state => ({ user: state });
+
+const mapDispatchToProps = dispatch => ({
+  getUsers: value => dispatch(getUsers(value)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp)

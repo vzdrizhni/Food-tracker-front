@@ -1,1 +1,1 @@
-export const getUsers = val => ({ type: 'Get', val });
+export const getUsers = val => ({ type: 'GET', val });

@@ -1,10 +1,10 @@
 import { createStore } from 'redux';
-import reducer from '../reducers/index';
+import userReducer from '../reducers/user.reducer';
 
 const initialState = {
   user: {}
 };
 
-const store = createStore(reducer, initialState);
+const store = createStore(userReducer, initialState);
 
 export default store;
