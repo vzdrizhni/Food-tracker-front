@@ -1,0 +1,1 @@
+export const getUsers = val => ({ type: 'Get', val });
