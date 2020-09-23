@@ -5,12 +5,15 @@ import Meal from '../Meal/meal'
 import { getMeal } from "../../actions/actions";
 
 const UserPage = (props) => {
-  useEffect(() => {
-    getMeal(props.user.meals);
-    console.log(meals);
-  }, );
+  const {meals, getMeal} = props
+  // getMeal(props.user.meals)
+  console.log(meals);
+  // console.log(props.user.meals);
 
-  const {meals} = props.user
+  useEffect(() => {
+    getMeal(props.user.meals)
+    console.log('hui');
+  }, []);
 
   const handleSubmit = () => {
     const url = 'https://boiling-beyond-13092.herokuapp.com/api/v1/meals'
@@ -23,7 +26,7 @@ const UserPage = (props) => {
         }
       })
       .then(response => response.json())
-      .then(data => console.log(data.data.meal))
+      .then(data => getMeal(data.data.meal))
   }
 
   if (Object.keys(props.user).length === 0)
@@ -33,11 +36,10 @@ const UserPage = (props) => {
       <div className='wrapper'>
         <button onClick={handleSubmit}>Add Meal</button>
       </div>
-      <div>{meals
-          .map(meal => (
+      <div>{meals.map(meal => (
             <Link to={`/meal/${meal.id}`} key={meal.id}>
               <div key={meal.id}>
-                <Meal meal={meal}/>
+                <Meal meal={meal} key={meal.id}/>
               </div>
             </Link>
           ))}

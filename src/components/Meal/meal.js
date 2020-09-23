@@ -1,8 +1,9 @@
 import React from "react";
 
 const Meal = (props) => {
+    // console.log(props);
     return(
-    <div>{props.created}</div>
+    <div>{props.meal.created}</div>
     )
 }
 

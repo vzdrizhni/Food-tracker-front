@@ -23,9 +23,7 @@ const SignIn = (props) => {
       .then(resp => resp.json())
       .then(data => {
         getUsers(data.data.user)
-        console.log(data);
         localStorage.setItem('token', data.data.user.authentication_token)
-        console.log(localStorage.getItem('token'));
         if (Object.keys(user).length > 0) {
           handleSuccessfullAuth()
         }
