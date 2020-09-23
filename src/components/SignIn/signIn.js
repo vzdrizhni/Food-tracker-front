@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux';
 import {getUsers} from "../../actions/actions";
 
-const SignUp = (props) => {
+const SignIn = (props) => {
   const {user, getUsers, history} = props
 
   const handleSuccessfullAuth = () => {
@@ -11,7 +11,7 @@ const SignUp = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const url = 'https://boiling-beyond-13092.herokuapp.com/api/v1/sign_up'
+    const url = 'https://boiling-beyond-13092.herokuapp.com/api/v1/sign_in'
     fetch(url, {
       method: 'POST',
       mode: 'cors',
@@ -23,6 +23,7 @@ const SignUp = (props) => {
       .then(resp => resp.json())
       .then(data => {
         getUsers(data.data.user)
+        console.log(data);
         localStorage.setItem('token', data.data.user.authentication_token)
         console.log(localStorage.getItem('token'));
         if (Object.keys(user).length > 0) {
@@ -33,13 +34,14 @@ const SignUp = (props) => {
   }
 
   let userValue = {
-    user: {}
+    sign_in: {}
   };
 
   const handleChange = (e) => {
-    userValue.user = Object.assign(userValue.user, {
+    userValue.sign_in = Object.assign(userValue.sign_in, {
       [e.target.name]: e.target.value
     })
+    console.log(JSON.stringify(userValue));
   }
 
   return (
@@ -61,4 +63,4 @@ const mapDispatchToProps = dispatch => ({
   getUsers: value => dispatch(getUsers(value))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignUp)
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn)
