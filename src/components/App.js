@@ -4,6 +4,7 @@ import SignIn from '../components/SignIn/signIn'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import UserPage from "../components/userPage/userPage";
 import Header from "../components/Header/header";
+import BottomNav from "../components/BottomNav/bottomNav";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route exact path="/sign_in" component={SignIn}/>
           <Route exact path="/userpage" component={UserPage}/>
         </Switch>
+        <Route path="/" component={BottomNav} />
       </Router>
     </div>
   )
