@@ -5,7 +5,8 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import UserPage from "../components/userPage/userPage";
 import Header from "../components/Header/header";
 import BottomNav from "../components/BottomNav/bottomNav";
-import Meal from '../components/Meal/meal'
+// import Meal from '../components/Meal/meal'
+import MealItem from "../components/mealItem/mealItem";
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
           <Route exact path="/" component={SignUp}/>
           <Route exact path="/sign_in" component={SignIn}/>
           <Route exact path="/userpage" component={UserPage}/>
-          <Route exact path="/meal/:id" component={Meal}/>
+          <Route exact path="/meal/:id" component={MealItem}/>
         </Switch>
         <Route path="/" component={BottomNav} />
       </Router>

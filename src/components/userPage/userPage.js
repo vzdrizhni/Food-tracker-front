@@ -13,7 +13,7 @@ const UserPage = (props) => {
   useEffect(() => {
     getMeal(props.user.meals)
     console.log('hui');
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleSubmit = () => {
     const url = 'https://boiling-beyond-13092.herokuapp.com/api/v1/meals'
@@ -44,6 +44,9 @@ const UserPage = (props) => {
             </Link>
           ))}
       </div>
+      {/* <div v-for="(meal, index) in meals" v-bind:key="index">
+        <router-link :to="{path: '/meal/${meal.id}'}"><Meal v-bind:meal="meal" /></roter-link>
+      </div> */}
     </article>
   )
 }
