@@ -41,7 +41,6 @@ const SignIn = (props) => {
     userValue.sign_in = Object.assign(userValue.sign_in, {
       [e.target.name]: e.target.value
     })
-    console.log(JSON.stringify(userValue));
   }
 
   return (

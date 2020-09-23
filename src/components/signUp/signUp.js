@@ -55,7 +55,7 @@ const SignUp = (props) => {
   )
 }
 
-const mapStateToProps = state => ({user: state});
+const mapStateToProps = state => ({user: state.user});
 
 const mapDispatchToProps = dispatch => ({
   getUsers: value => dispatch(getUsers(value))

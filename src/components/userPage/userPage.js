@@ -1,10 +1,19 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {connect} from 'react-redux';
 import {Redirect, Link} from "react-router-dom";
+import Meal from '../Meal/meal'
+import { getMeal } from "../../actions/actions";
 
 const UserPage = (props) => {
-  const url = 'https://boiling-beyond-13092.herokuapp.com/api/v1/meals'
+  useEffect(() => {
+    getMeal(props.user.meals);
+    console.log(meals);
+  }, );
+
+  const {meals} = props.user
+
   const handleSubmit = () => {
+    const url = 'https://boiling-beyond-13092.herokuapp.com/api/v1/meals'
     fetch(url, {
         method: 'POST',
         mode: 'cors',
@@ -24,13 +33,11 @@ const UserPage = (props) => {
       <div className='wrapper'>
         <button onClick={handleSubmit}>Add Meal</button>
       </div>
-      <div>{props
-          .user
-          .meals
+      <div>{meals
           .map(meal => (
             <Link to={`/meal/${meal.id}`} key={meal.id}>
               <div key={meal.id}>
-                <span>{meal.created}</span>
+                <Meal meal={meal}/>
               </div>
             </Link>
           ))}
@@ -39,6 +46,10 @@ const UserPage = (props) => {
   )
 }
 
-const mapStateToProps = state => ({user: state});
+const mapStateToProps = state => ({user: state.user, meals: state.meals});
 
-export default connect(mapStateToProps)(UserPage)
+const mapDispatchToProps = dispatch => ({
+  getMeal: value => dispatch(getMeal(value))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserPage)
