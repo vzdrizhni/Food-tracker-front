@@ -6,7 +6,6 @@ import './mealitem.css'
 
 const MealItem = (props) => {
   const {getFood, food} = props
-  console.log(food);
 
   const meal = props
     .meals

@@ -1,9 +1,4 @@
-.food {
-    background-color: #fff;
-    color: #92A0AE;
-    font-size: 1.5em;
-    margin: 10px 5px;
-    padding: 15px;
+.meal-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
