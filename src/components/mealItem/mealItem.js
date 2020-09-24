@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import {connect} from 'react-redux';
 import {getFood} from "../../actions/actions";
 import Food from "../Food/food";
+import './mealitem.css'
 
 const MealItem = (props) => {
   const {getFood, food} = props
@@ -30,7 +31,7 @@ const MealItem = (props) => {
         body: JSON.stringify(userValue)
       })
       .then(resp => resp.json())
-      .then(data => getFood(data))
+      .then(data => getFood(data.data.food))
   }
 
   let userValue = {
@@ -49,11 +50,11 @@ const MealItem = (props) => {
         <form onSubmit={handleFoodCreation}>
           <label htmlFor="title">Title:</label>
           <input type="text" id="title" name="title" onChange={handleChange}/>
-          <label htmlFor="calories">calories</label>
+          <label htmlFor="calories">Calories</label>
           <input type="text" id="calories" name="calories" onChange={handleChange}/>
-          <label htmlFor="grams">calories</label>
+          <label htmlFor="grams">Grams</label>
           <input type="text" id="grams" name="grams" onChange={handleChange}/>
-          <input type="submit" value="Submit"></input>
+          <input type="submit" value="Submit" className='btn'></input>
         </form>
       </div>
       <div className='food-list'>

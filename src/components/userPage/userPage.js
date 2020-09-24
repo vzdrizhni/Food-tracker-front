@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {Redirect, Link} from "react-router-dom";
 import Meal from '../Meal/meal'
 import { getMeal } from "../../actions/actions";
+import './userpage.css'
 
 const UserPage = (props) => {
   const {meals, getMeal} = props
@@ -32,9 +33,9 @@ const UserPage = (props) => {
       <div className='wrapper'>
         <button onClick={handleSubmit}>Add Meal</button>
       </div>
-      <div>{meals.map(meal => (
+      <div className='meals-list'>{meals.map(meal => (
             <Link to={`/meal/${meal.id}`} key={meal.id}>
-              <div key={meal.id}>
+              <div key={meal.id} className='meal-item'>
                 <Meal meal={meal} key={meal.id}/>
               </div>
             </Link>

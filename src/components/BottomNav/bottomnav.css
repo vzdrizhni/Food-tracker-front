@@ -5,10 +5,27 @@ nav {
     bottom: 0;
     width: 100%;
     background-color: #313944;
-    height: 10%;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+.svg-inline--fa.fa-w-14, .svg-inline--fa.fa-w-16 {
+   font-size: 3.5em;
+}
+
+.add-measure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

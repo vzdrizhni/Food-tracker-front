@@ -2,6 +2,7 @@ import React from "react";
 import {connect} from 'react-redux';
 import {destroyUser} from "../../actions/actions";
 import { Link } from "react-router-dom";
+import "./header.css";
 
 const Header = (props) => {
   const {destroyUser} = props
