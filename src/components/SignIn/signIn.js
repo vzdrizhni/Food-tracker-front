@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux';
 import {getUsers} from "../../actions/actions";
+import "./signin.css";
 
 const SignIn = (props) => {
   const {user, getUsers, history} = props
@@ -48,7 +49,7 @@ const SignIn = (props) => {
         <input type="text" id="fname" name="email" onChange={handleChange}/>
         <label htmlFor="lname">Password:</label>
         <input type="text" id="lname" name="password" onChange={handleChange}/>
-        <input type="submit" value="Submit"></input>
+        <input type="submit" value="Submit" className='btn'></input>
       </form>
     </div>
   )

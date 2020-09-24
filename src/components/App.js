@@ -5,8 +5,8 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import UserPage from "../components/userPage/userPage";
 import Header from "../components/Header/header";
 import BottomNav from "../components/BottomNav/bottomNav";
-// import Meal from '../components/Meal/meal'
 import MealItem from "../components/mealItem/mealItem";
+import './app.css'
 
 const App = () => {
   return (
