@@ -6,13 +6,9 @@ import { getMeal } from "../../actions/actions";
 
 const UserPage = (props) => {
   const {meals, getMeal} = props
-  // getMeal(props.user.meals)
-  console.log(meals);
-  // console.log(props.user.meals);
 
   useEffect(() => {
     getMeal(props.user.meals)
-    console.log('hui');
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleSubmit = () => {
@@ -44,9 +40,6 @@ const UserPage = (props) => {
             </Link>
           ))}
       </div>
-      {/* <div v-for="(meal, index) in meals" v-bind:key="index">
-        <router-link :to="{path: '/meal/${meal.id}'}"><Meal v-bind:meal="meal" /></roter-link>
-      </div> */}
     </article>
   )
 }
