@@ -2,7 +2,7 @@ import React from 'react'
 import './food.css'
 
 const Food = (props) => {
-    console.log(props);
+    // console.log(props);
     return(
         <div className='food'>
             <div><span>Title: </span>{props.food.title}</div>

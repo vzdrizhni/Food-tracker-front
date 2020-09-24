@@ -6,6 +6,7 @@ import './mealitem.css'
 
 const MealItem = (props) => {
   const {getFood, food} = props
+  console.log(food);
 
   const meal = props
     .meals
@@ -16,7 +17,7 @@ const MealItem = (props) => {
     fetch(url, {method: 'Get'})
       .then(resp => resp.json())
       .then(data => getFood(data.data.meal.foods))
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [food.length]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleFoodCreation = (e) => {
     e.preventDefault();
