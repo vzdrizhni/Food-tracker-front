@@ -9,9 +9,10 @@ const MealItem = (props) => {
   const meal = props
     .meals
     .find(obj => obj.id == props.match.params.id); // eslint-disable-line eqeqeq
-  console.log(food);
+  // console.log(food);
 
   useEffect(() => {
+    // clearMeal();
     const url = `https://boiling-beyond-13092.herokuapp.com/api/v1/meals/${meal.id}`
     fetch(url, {method: 'Get'})
       .then(resp => resp.json())

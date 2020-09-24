@@ -1,8 +1,9 @@
 const foodReducer = (state = [], action) => {
     switch (action.type) {
       case 'GETFOOD':
+        state = []
         return state.concat(action.val);
-      case 'DEL':
+      case 'CLEAR':
           return state = [];
       default:
         return state;
