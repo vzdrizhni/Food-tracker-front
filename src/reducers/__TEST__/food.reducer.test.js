@@ -1,13 +1,13 @@
-import foodReducer from "../food.reducer";
-import { getFood } from "../../actions/actions";
+import foodReducer from '../food.reducer';
+import { getFood } from '../../actions/actions';
 
 const state = [];
 const result = {
-        title: 'Soup',
-        calories: 220,
-        grams: 300
-    }
-const res = foodReducer(state, getFood(result))
+  title: 'Soup',
+  calories: 220,
+  grams: 300,
+};
+const res = foodReducer(state, getFood(result));
 
 it('should be type of object', () => {
   expect(typeof foodReducer(state, result)).toBe('object');

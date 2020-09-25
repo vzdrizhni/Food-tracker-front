@@ -1,11 +1,13 @@
-import {getUsers, destroyUser, getMeal, getFood} from "../actions";
+import {
+  getUsers, destroyUser, getMeal, getFood,
+} from '../actions';
 
 const user = getUsers();
 const destrUser = destroyUser();
 const meal = getMeal();
 const mealParameter = getMeal('Joke');
-const food = getFood()
-const foodCake = getFood('Cake')
+const food = getFood();
+const foodCake = getFood('Cake');
 
 it('value of type property should be GET ', () => {
   expect(user.type).toBe('GET');

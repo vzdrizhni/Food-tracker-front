@@ -12,6 +12,12 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "eslint": "6.8.x",
+    "eslint-config-airbnb": "18.1.x",
+    "eslint-plugin-import": "2.20.x",
+    "eslint-plugin-jsx-a11y": "6.2.x",
+    "eslint-plugin-react": "7.20.x",
+    "eslint-plugin-react-hooks": "2.5.x",
     "immutability-helper": "^3.1.1",
     "react": "^16.13.1",
     "react-circular-progressbar": "^2.0.3",
@@ -19,7 +25,11 @@
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "stylelint": "13.3.x",
+    "stylelint-config-standard": "20.0.x",
+    "stylelint-csstree-validator": "^1.8.0",
+    "stylelint-scss": "3.17.x"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -42,6 +52,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

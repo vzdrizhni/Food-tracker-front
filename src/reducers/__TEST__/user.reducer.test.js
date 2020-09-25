@@ -1,22 +1,22 @@
-import {getUsers, destroyUser} from "../../actions/actions";
-import userReducer from "../user.reducer";
+import { getUsers, destroyUser } from '../../actions/actions';
+import userReducer from '../user.reducer';
 
 const state = {};
 const result = {
-    messages: 'Signed Up Successfully',
-    is_success: true,
-    data: {
-      user: {
-        id: 85,
-        email: 'nikulai@hui.com',
-        authentication_token: 'xe_2a7FLz5hyYx5twfsj',
-        name: 'Nikulai',
-        meals: [],
-      },
+  messages: 'Signed Up Successfully',
+  is_success: true,
+  data: {
+    user: {
+      id: 85,
+      email: 'nikulai@hui.com',
+      authentication_token: 'xe_2a7FLz5hyYx5twfsj',
+      name: 'Nikulai',
+      meals: [],
     },
-  }
+  },
+};
 
-const res = userReducer(state, getUsers(result))
+const res = userReducer(state, getUsers(result));
 
 it('should be type of object', () => {
   expect(typeof res).toBe('object');

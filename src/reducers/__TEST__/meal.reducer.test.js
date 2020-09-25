@@ -1,12 +1,12 @@
-import mealReducer from "../meal.reducer";
-import {getMeal} from "../../actions/actions";
+import mealReducer from '../meal.reducer';
+import { getMeal } from '../../actions/actions';
 
 const state = [];
 const result = {
   id: 1,
-  created: '22 september, 2020'
-}
-const res = mealReducer(state, getMeal(result))
+  created: '22 september, 2020',
+};
+const res = mealReducer(state, getMeal(result));
 
 it('should be type of object', () => {
   expect(typeof mealReducer(state, result)).toBe('object');
