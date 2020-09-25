@@ -1,7 +1,10 @@
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
     font-family: 'Roboto Slab', serif;;
     height: 110vh;
     background-color: #F3F4F6;
