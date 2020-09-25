@@ -6,6 +6,7 @@ import UserPage from "../components/userPage/userPage";
 import Header from "../components/Header/header";
 import BottomNav from "../components/BottomNav/bottomNav";
 import MealItem from "../components/mealItem/mealItem";
+import AddMeal from "../components/AddMeal/addMeal";
 import './app.css'
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
           <Route exact path="/sign_in" component={SignIn}/>
           <Route exact path="/userpage" component={UserPage}/>
           <Route exact path="/meal/:id" component={MealItem}/>
+          <Route exact path="/addmeasure" component={AddMeal}/>
         </Switch>
         <Route path="/" component={BottomNav} />
       </Router>
