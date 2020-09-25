@@ -46,10 +46,10 @@ const SignIn = (props) => {
     <div className='wrapper'>
       <form onSubmit={handleSubmit}>
         <label htmlFor="fname">Email:</label>
-        <input type="text" id="fname" name="email" onChange={handleChange}/>
+        <input type="email" id="fname" name="email" required onChange={handleChange}/>
         <label htmlFor="lname">Password:</label>
-        <input type="text" id="lname" name="password" onChange={handleChange}/>
-        <input type="submit" value="Submit" className='btn'></input>
+        <input type="password" id="lname" name="password" required onChange={handleChange}/>
+        <input type="submit" value="Sign In" className='btn'></input>
       </form>
     </div>
   )

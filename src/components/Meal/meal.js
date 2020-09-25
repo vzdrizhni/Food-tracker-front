@@ -4,15 +4,13 @@ import 'react-circular-progressbar/dist/styles.css';
 import "./meal.css";
 
 const Meal = (props) => {
-  console.log(props);
-
   const val = Math.floor(Math.random() * 100)
 
   return (
-    <div className='meal-item'>
+    <>
       <div>{props.meal.created}</div>
-      <CircularProgressbar value={val} text={`${val} cal`} />
-    </div>
+      <CircularProgressbar className='meal-bar' value={val} text={`${val} cal`} />
+    </>
   )
 }
 

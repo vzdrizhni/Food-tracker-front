@@ -6,7 +6,6 @@ import Meal from './meal.svg'
 import Scale from './body-scale.svg'
 
 const Food = (props) => {
-    // console.log(props);
     const value = Math.floor((props.food.calories * (props.food.grams / 100) / 10))
 
     return(

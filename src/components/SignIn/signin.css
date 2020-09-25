@@ -1,6 +1,5 @@
 .wrapper {
-    width: 600px;
-    margin: 0 auto 10px auto;
+    padding: 6.5em 0 !important;
     text-align: left;
     margin-top: 120px;
     background-color: #F3F4F6;

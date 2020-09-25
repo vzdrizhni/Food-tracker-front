@@ -1,11 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {connect} from "react-redux";
 import {getMeal} from "../../actions/actions";
 import { Link } from "react-router-dom";
 import Meal from "../Meal/meal";
+import "./addmeal.css";
 
 const AddMeal = (props) => {
   const {meals, getMeal} = props
+
+  useEffect(() => {
+    getMeal([])
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleSubmit = () => {
     const url = 'https://boiling-beyond-13092.herokuapp.com/api/v1/meals'

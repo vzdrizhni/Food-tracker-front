@@ -4,6 +4,13 @@ header {
     height: 6em;
     display: flex;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 22px;
 }
 
 a {
@@ -17,4 +24,26 @@ a:hover {
 
 header span {
     padding: 0 10px;
+}
+
+.username {
+    font-size: 2rem;
+    font-family: Arial;
+    font-weight: 700;
+    border-bottom: 1px solid;
+    padding-bottom: 3px;
+}
+
+.log {
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 6px;
+    background-color: forestgreen;
+    cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .second {
+        font-size: 1.2em;
+    }
 }

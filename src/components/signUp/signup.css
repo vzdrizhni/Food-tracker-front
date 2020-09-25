@@ -1,6 +1,5 @@
 .wrapper {
-    width: 600px;
-    margin: 0 auto 10px auto;
+    padding: 6.5em 0 0 0 !important;
     text-align: left;
 }
 
@@ -36,7 +35,7 @@ input {
     white-space: nowrap;
     height: 42px;
     margin: 12px 5px 12px 0;
-    padding: 0 22px;
+    padding: 0 22px !important;
     text-decoration: none;
     text-align: center;
     cursor: pointer;
@@ -44,4 +43,11 @@ input {
     border-radius: 2px;
     vertical-align: top;
     width: 25%;
+}
+
+@media (max-width: 576px) {
+    .btn {
+        padding: 0 !important;
+        width: 50% !important;
+    }
 }

@@ -7,9 +7,20 @@ import './userpage.css'
 
 const UserPage = (props) => {
   const {meals, getMeal} = props
+  console.log(meals);
 
   useEffect(() => {
-    getMeal(props.user.meals)
+    const url = 'https://boiling-beyond-13092.herokuapp.com/api/v1/meals'
+    fetch(url, {
+      method: 'GET',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json',
+        "AUTH-TOKEN": localStorage.getItem('token')
+      }
+    })
+    .then(resp => resp.json())
+    .then(response => getMeal(response.data.meal))
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (Object.keys(props.user).length === 0)

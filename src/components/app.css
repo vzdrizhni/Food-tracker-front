@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
 }
 
 body {
-    font-family: 'Roboto Slab', serif;
-    height: 110vh;
+    height: 100vh;
     background-color: #F3F4F6;
 }

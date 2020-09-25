@@ -10,7 +10,8 @@
 }
 
 .CircularProgressbar {
-    width: 10% !important;
+    max-width: 24% !important;
+    width: 178px;
 }
 
 .calories {
@@ -37,4 +38,39 @@ img {
 
 .title {
     margin-bottom: 5px;
+}
+
+@media (max-width: 576px) {
+    .food {
+        justify-content: space-between;
+        flex-direction: column-reverse;
+    }
+
+    .food-data {
+        width: 100%;
+    }
+
+    .measure-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .calories {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .title {
+        float: left;
+        clear: both;
+        margin: -21px 0 32px;
+    }
+
+    .CircularProgressbar {
+        align-self: flex-end;
+        margin-bottom: -26px;
+        margin-right: 12px;
+        width: 18% !important;
+    }
 }

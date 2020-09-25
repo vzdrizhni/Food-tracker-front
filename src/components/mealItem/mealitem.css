@@ -1,9 +1,13 @@
 .wrapper {
-    width: 600px;
     margin: 0 auto 10px auto;
     text-align: left;
     margin-top: 120px;
     background-color: #F3F4F6;
+    padding: 6.5em 0 0 !important;
+}
+
+.food-list {
+    padding-bottom: 6em;
 }
 
 form {
@@ -19,12 +23,16 @@ form {
 input {
     display: block;
     /* margin: 0; */
-    padding: 0 !important;
+    padding-left: 10px !important;
     height: 30px;
     background: #fff;
     width: 100%;
     border: 2px solid #d0d0d0 !important;
     border-radius: 3px;
+}
+
+input:focus {
+    outline: yellowgreen;
 }
 
 .btn {
@@ -48,3 +56,4 @@ input {
     vertical-align: top;
     width: 25%;
 }
+

@@ -5,7 +5,11 @@ import { Link } from "react-router-dom";
 import "./header.css";
 
 const Header = (props) => {
-  const {destroyUser} = props
+  const {destroyUser, history} = props
+
+  const handleSuccessfullAuth = () => {
+    history.push("/sign_in")
+  }
 
   const handleLogOut = () => {
     const url = 'https://boiling-beyond-13092.herokuapp.com/api/v1/log_out'
@@ -20,26 +24,39 @@ const Header = (props) => {
     .then(resp => resp.json())
     .then(data => {
       destroyUser();
-      localStorage.clear()
+      localStorage.clear();
+      handleSuccessfullAuth();
     })
     .catch(err => console.log(err))
   }
 
+  console.log(props);
+
   if (Object.keys(props.user).length > 0) {
     return (
       <header>
-        <span>{props.user.email}</span>
-        <span onClick={handleLogOut}>LogOut</span>
+        <span className='username'>{props.user.name}</span>
+        <span className='log' onClick={handleLogOut}>LogOut</span>
       </header>
     )
   } else {
-    return (
+    if (props.location.pathname == '/') { //eslint-disable-line eqeqeq
+      return (
       <header>
-        <span>If you have an account:
+        <span className='username second'>If you have an account:
         </span>
-        <Link to='/sign_in'><span>LogIn</span></Link>
+        <Link to='/sign_in'><span className='log'>LogIn</span></Link>
       </header>
-    )
+      )
+    } else {
+      return (
+        <header>
+          <span className='username second'>Create Account:
+          </span>
+          <Link to='/'><span className='log'>Sign Up</span></Link>
+        </header>
+      )
+    }
   }
 }
 
