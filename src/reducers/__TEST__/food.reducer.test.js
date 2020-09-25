@@ -9,26 +9,26 @@ const result = {
     }
 const res = foodReducer(state, getFood(result))
 
-it('should return val property of foodReducer function', () => {
+it('should be type of object', () => {
   expect(typeof foodReducer(state, result)).toBe('object');
 });
 
-it('should return val property of foodReducer function', () => {
+it('should contain an object', () => {
   expect(typeof foodReducer(state, result)).toContain('object');
 });
 
-it('should return val property of foodReducer function', () => {
+it('first element should be an object', () => {
   expect(typeof res[0]).toBe('object');
 });
 
-it('should return val property of foodReducer function', () => {
+it('first element should be Soup', () => {
   expect(res[0].title).toBe('Soup');
 });
 
-it('should return val property of foodReducer function', () => {
+it('calories key should be equal to 220', () => {
   expect(res[0].calories).toEqual(220);
 });
 
-it('should return val property of foodReducer function', () => {
+it('grams key should be equal to 300', () => {
   expect(res[0].grams).toEqual(300);
 });
