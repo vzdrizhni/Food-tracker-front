@@ -1,10 +1,8 @@
 const mealReducer = (state = [], action) => {
   switch (action.type) {
     case 'GETMEAL':
-      state = [];
+      state = []; // eslint-disable-line no-param-reassign
       return state.concat(action.val);
-    case 'CLEAR':
-      return state = [];
     default:
       return state;
   }

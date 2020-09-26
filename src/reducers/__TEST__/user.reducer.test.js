@@ -1,4 +1,4 @@
-import { getUsers, destroyUser } from '../../actions/actions';
+import { getUsers } from '../../actions/actions';
 import userReducer from '../user.reducer';
 
 const state = {};

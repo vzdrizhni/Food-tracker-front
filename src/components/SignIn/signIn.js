@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { getUsers } from '../../actions/actions';
 import './signin.css';
 
@@ -8,6 +9,10 @@ const SignIn = props => {
 
   const handleSuccessfullAuth = () => {
     history.push('/userpage');
+  };
+
+  const userValue = {
+    sign_in: {},
   };
 
   const handleSubmit = e => {
@@ -29,11 +34,7 @@ const SignIn = props => {
           handleSuccessfullAuth();
         }
       })
-      .catch(err => console.log(err));
-  };
-
-  let userValue = {
-    sign_in: {},
+      .catch(err => err);
   };
 
   const handleChange = e => {
@@ -45,10 +46,14 @@ const SignIn = props => {
   return (
     <div className="wrapper">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="fname">Email:</label>
-        <input type="email" id="fname" name="email" required onChange={handleChange} />
-        <label htmlFor="lname">Password:</label>
-        <input type="password" id="lname" name="password" required onChange={handleChange} />
+        <label htmlFor="fname">
+          Email:
+          <input type="email" id="fname" name="email" required onChange={handleChange} />
+        </label>
+        <label htmlFor="lname">
+          Password:
+          <input type="password" id="lname" name="password" required onChange={handleChange} />
+        </label>
         <input type="submit" value="Sign In" className="btn" />
       </form>
     </div>
@@ -60,5 +65,11 @@ const mapStateToProps = state => ({ user: state });
 const mapDispatchToProps = dispatch => ({
   getUsers: value => dispatch(getUsers(value)),
 });
+
+SignIn.propTypes = {
+  getUsers: PropTypes.func.isRequired,
+  user: PropTypes.instanceOf(Object).isRequired,
+  history: PropTypes.instanceOf(Object).isRequired,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

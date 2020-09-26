@@ -2,7 +2,6 @@ header {
   background-color: #42b5e8;
   color: #fff;
   height: 6em;
-  display: flex;
   align-items: center;
   position: fixed;
   width: 100%;
@@ -28,7 +27,7 @@ header span {
 
 .username {
   font-size: 2rem;
-  font-family: Arial;
+  font-family: Arial, serif;
   font-weight: 700;
   border-bottom: 1px solid;
   padding-bottom: 3px;

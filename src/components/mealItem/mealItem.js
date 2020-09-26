@@ -1,21 +1,23 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {getFood} from '../../actions/actions';
+import {getFood, addFood} from '../../actions/actions';
 import Food from '../Food/food';
 import './mealitem.css';
 
 const MealItem = props => {
-  const {getFood, food, meals} = props;
+  const {getFood, food, meals, addFood} = props;
+  console.log(food);
 
   const meal = meals.find(obj => obj.id == props.match.params.id); // eslint-disable-line eqeqeq
 
   useEffect(() => {
     const url = `https://boiling-beyond-13092.herokuapp.com/api/v1/meals/${meal.id}`;
-    fetch(url, {method: 'Get'})
+    fetch(url, { method: 'Get' })
       .then(resp => resp.json())
       .then(data => getFood(data.data.meal.foods));
-  }, [food.length]); // eslint-disable-line react-hooks/exhaustive-deps
+      console.log(food.length);
+  }, [food.length]);
 
   const handleFoodCreation = e => {
     e.preventDefault();
@@ -30,7 +32,7 @@ const MealItem = props => {
         body: JSON.stringify(userValue)
       })
       .then(resp => resp.json())
-      .then(data => getFood(data.data.food));
+      .then(data => addFood(data.data.food));
   };
 
   let userValue = {
@@ -66,7 +68,8 @@ const MealItem = props => {
 const mapStateToProps = state => ({meals: state.meals, food: state.food});
 
 const mapDispatchToProps = dispatch => ({
-  getFood: value => dispatch(getFood(value))
+  getFood: value => dispatch(getFood(value)),
+  addFood: value => dispatch(addFood(value)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MealItem);
