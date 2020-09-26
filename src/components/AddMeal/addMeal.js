@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { getMeal } from '../../actions/actions';
 import Meal from '../Meal/meal';
 import './addmeal.css';
@@ -10,7 +11,7 @@ const AddMeal = props => {
 
   useEffect(() => {
     getMeal([]);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleSubmit = () => {
     const url = 'https://boiling-beyond-13092.herokuapp.com/api/v1/meals';
@@ -29,7 +30,7 @@ const AddMeal = props => {
   return (
     <div>
       <div className="wrapper">
-        <button onClick={handleSubmit}>Add Meal</button>
+        <button type="button" onClick={handleSubmit}>Add Meal</button>
       </div>
       <div className="meals-list">
         {meals.map(meal => (
@@ -49,5 +50,10 @@ const mapStateToProps = state => ({ user: state.user, meals: state.meals });
 const mapDispatchToProps = dispatch => ({
   getMeal: value => dispatch(getMeal(value)),
 });
+
+AddMeal.propTypes = {
+  getMeal: PropTypes.func.isRequired,
+  meals: PropTypes.instanceOf(Array).isRequired,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddMeal);

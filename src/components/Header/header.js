@@ -1,11 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { destroyUser } from '../../actions/actions';
 import './header.css';
 
 const Header = props => {
-  const { destroyUser, history } = props;
+  const {
+    destroyUser, history, user, location,
+  } = props;
+  const { pathname } = location;
 
   const handleSuccessfullAuth = () => {
     history.push('/sign_in');
@@ -22,24 +26,22 @@ const Header = props => {
       },
     })
       .then(resp => resp.json())
-      .then(data => {
+      .then(() => {
         destroyUser();
         localStorage.clear();
         handleSuccessfullAuth();
       })
-      .catch(err => console.log(err));
+      .catch(err => err);
   };
 
-  console.log(props);
-
-  if (Object.keys(props.user).length > 0) {
+  if (Object.keys(user).length > 0) {
     return (
       <header>
         <span className="username">{props.user.name}</span>
-        <span className="log" onClick={handleLogOut}>LogOut</span>
+        <span aria-hidden="true" className="log" onClick={handleLogOut} onKeyDown={handleLogOut}>LogOut</span>
       </header>
     );
-  } if (props.location.pathname == '/') { // eslint-disable-line eqeqeq
+  } if (pathname == '/') { // eslint-disable-line eqeqeq
     return (
       <header>
         <span className="username second">
@@ -64,5 +66,12 @@ const mapStateToProps = state => ({ user: state.user });
 const mapDispatchToProps = dispatch => ({
   destroyUser: () => dispatch(destroyUser()),
 });
+
+Header.propTypes = {
+  destroyUser: PropTypes.func.isRequired,
+  history: PropTypes.instanceOf(Object).isRequired,
+  user: PropTypes.instanceOf(Object).isRequired,
+  location: PropTypes.instanceOf(Object).isRequired,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

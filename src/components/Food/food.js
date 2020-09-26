@@ -2,24 +2,27 @@ import React from 'react';
 import './food.css';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import PropTypes from 'prop-types';
 import Meal from './meal.svg';
 import Scale from './body-scale.svg';
 
 const Food = props => {
-  const value = Math.floor((props.food.calories * (props.food.grams / 100) / 10));
+  const { food } = props;
+  const { calories, grams, title } = food;
+  const value = Math.floor((calories * (grams / 100)));
 
   return (
     <div className="food">
       <div className="food-data">
         <div className="title">
           <span>Title: </span>
-          {props.food.title}
+          {title}
         </div>
         <div className="measure-wrapper">
           <div className="calories">
             <div>
               <span>Calories: </span>
-              {props.food.calories}
+              {calories}
             </div>
             {' '}
             <img src={Meal} alt="React Logo" />
@@ -27,7 +30,7 @@ const Food = props => {
           <div className="calories">
             <div>
               <span>Grams: </span>
-              {props.food.grams}
+              {grams}
             </div>
             <img src={Scale} alt="React Logo" />
           </div>
@@ -36,6 +39,19 @@ const Food = props => {
       <CircularProgressbar value={value} text={`${value} cal`} />
     </div>
   );
+};
+
+Food.propTypes = {
+  food: PropTypes.instanceOf(Object).isRequired,
+  calories: PropTypes.string,
+  grams: PropTypes.string,
+  title: PropTypes.string,
+};
+
+Food.defaultProps = {
+  calories: '123',
+  grams: '123',
+  title: 'Soup',
 };
 
 export default Food;
