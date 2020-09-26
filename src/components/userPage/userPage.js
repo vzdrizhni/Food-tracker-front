@@ -21,7 +21,7 @@ const UserPage = props => {
     })
       .then(resp => resp.json())
       .then(response => getMeal(response.data.meal));
-  }, []);
+  }, [meals.length]);
 
   if (Object.keys(user).length === 0) { return <Redirect to="/" />; }
   return (
