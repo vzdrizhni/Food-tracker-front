@@ -53,10 +53,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-  The Food-tracker-front is a capstone project based on a tracking application.
+  The Food-tracker-front is a capstone project based on a tracking application. This application tracks calories consumed by user. User can create meals and food for each meal created. Each user has it's own statistics. To use the application user must be signed up and signed in. All the data stored and processed on a backe-end server.
 
 ![screenshot-1](src/assets/screen1.png)
-![screenshot-1](src/assets/screen2.png)
 
 ### Built With
 This project was built using these technologies.
@@ -109,11 +108,7 @@ To have this app on your pc, you need to:
 ## Live Demo & Deployment
 The project has been deployed with Github Pages.
 
-[Heroku Live Demo Link](https://vzdrizhni.github.io/Food-tracker-front/) :point_left:
-
-## WalkThrough Video:
-https://www.loom.com/share/247c5bf9e10e4c40a41de4c2a186b64f
-
+[GitHub Pages Live Demo Link](https://vzdrizhni.github.io/Food-tracker-front/) :point_left:
 
 <!-- CONTACT -->
 ## Contributors
@@ -136,6 +131,7 @@ Give a :star: if you like this project!
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
+* Design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
 * [Microverse](https://www.microverse.org/)
 * [The Odin Project](https://www.theodinproject.com/)
 * [React Documentation](https://reactjs.org/docs/getting-started.html)
