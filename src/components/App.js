@@ -14,7 +14,7 @@ const App = () => (
     <Router>
       <Route path="/" component={Header} />
       <Switch>
-        <Route exact path="/" component={SignUp} />
+        <Route exact path="/Food-tracker-front/" component={SignUp} />
         <Route exact path="/sign_in" component={SignIn} />
         <Route exact path="/userpage" component={UserPage} />
         <Route exact path="/meal/:id" component={MealItem} />

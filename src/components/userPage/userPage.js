@@ -23,7 +23,7 @@ const UserPage = props => {
       .then(response => getMeal(response.data.meal));
   }, [meals.length]);
 
-  if (Object.keys(user).length === 0) { return <Redirect to="/" />; }
+  if (Object.keys(user).length === 0) { return <Redirect to="/Food-tracker-front/" />; }
   return (
     <article>
       <div className="meals-list">

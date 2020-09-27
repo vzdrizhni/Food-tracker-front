@@ -56,7 +56,7 @@ const Header = props => {
       <span className="username second">
         Create Account:
       </span>
-      <Link to="/"><span className="log">Sign Up</span></Link>
+      <Link to="/Food-tracker-front/"><span className="log">Sign Up</span></Link>
     </header>
   );
 };
