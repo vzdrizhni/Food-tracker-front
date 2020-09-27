@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/vzdrizhni/Food-tracker-front/static/css/main.b6187bd2.chunk.css",
-    "main.js": "/vzdrizhni/Food-tracker-front/static/js/main.44ab00cf.chunk.js",
-    "main.js.map": "/vzdrizhni/Food-tracker-front/static/js/main.44ab00cf.chunk.js.map",
-    "runtime-main.js": "/vzdrizhni/Food-tracker-front/static/js/runtime-main.dd6eee74.js",
-    "runtime-main.js.map": "/vzdrizhni/Food-tracker-front/static/js/runtime-main.dd6eee74.js.map",
-    "static/css/2.f524894f.chunk.css": "/vzdrizhni/Food-tracker-front/static/css/2.f524894f.chunk.css",
-    "static/js/2.a25257bb.chunk.js": "/vzdrizhni/Food-tracker-front/static/js/2.a25257bb.chunk.js",
-    "static/js/2.a25257bb.chunk.js.map": "/vzdrizhni/Food-tracker-front/static/js/2.a25257bb.chunk.js.map",
-    "index.html": "/vzdrizhni/Food-tracker-front/index.html",
-    "precache-manifest.483445b2e9d5c6735d7ee283876950b7.js": "/vzdrizhni/Food-tracker-front/precache-manifest.483445b2e9d5c6735d7ee283876950b7.js",
-    "service-worker.js": "/vzdrizhni/Food-tracker-front/service-worker.js",
-    "static/css/2.f524894f.chunk.css.map": "/vzdrizhni/Food-tracker-front/static/css/2.f524894f.chunk.css.map",
-    "static/css/main.b6187bd2.chunk.css.map": "/vzdrizhni/Food-tracker-front/static/css/main.b6187bd2.chunk.css.map",
-    "static/js/2.a25257bb.chunk.js.LICENSE.txt": "/vzdrizhni/Food-tracker-front/static/js/2.a25257bb.chunk.js.LICENSE.txt",
-    "static/media/body-scale.svg": "/vzdrizhni/Food-tracker-front/static/media/body-scale.e6a0817a.svg",
-    "static/media/meal.svg": "/vzdrizhni/Food-tracker-front/static/media/meal.92bd9476.svg"
+    "main.css": "/Food-tracker-front/static/css/main.b6187bd2.chunk.css",
+    "main.js": "/Food-tracker-front/static/js/main.28605a27.chunk.js",
+    "main.js.map": "/Food-tracker-front/static/js/main.28605a27.chunk.js.map",
+    "runtime-main.js": "/Food-tracker-front/static/js/runtime-main.c7e5d08b.js",
+    "runtime-main.js.map": "/Food-tracker-front/static/js/runtime-main.c7e5d08b.js.map",
+    "static/css/2.f524894f.chunk.css": "/Food-tracker-front/static/css/2.f524894f.chunk.css",
+    "static/js/2.a25257bb.chunk.js": "/Food-tracker-front/static/js/2.a25257bb.chunk.js",
+    "static/js/2.a25257bb.chunk.js.map": "/Food-tracker-front/static/js/2.a25257bb.chunk.js.map",
+    "index.html": "/Food-tracker-front/index.html",
+    "precache-manifest.ed0ccb6100f995b025ef27b7f174dcb6.js": "/Food-tracker-front/precache-manifest.ed0ccb6100f995b025ef27b7f174dcb6.js",
+    "service-worker.js": "/Food-tracker-front/service-worker.js",
+    "static/css/2.f524894f.chunk.css.map": "/Food-tracker-front/static/css/2.f524894f.chunk.css.map",
+    "static/css/main.b6187bd2.chunk.css.map": "/Food-tracker-front/static/css/main.b6187bd2.chunk.css.map",
+    "static/js/2.a25257bb.chunk.js.LICENSE.txt": "/Food-tracker-front/static/js/2.a25257bb.chunk.js.LICENSE.txt",
+    "static/media/body-scale.svg": "/Food-tracker-front/static/media/body-scale.e6a0817a.svg",
+    "static/media/meal.svg": "/Food-tracker-front/static/media/meal.92bd9476.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.dd6eee74.js",
+    "static/js/runtime-main.c7e5d08b.js",
     "static/css/2.f524894f.chunk.css",
     "static/js/2.a25257bb.chunk.js",
     "static/css/main.b6187bd2.chunk.css",
-    "static/js/main.44ab00cf.chunk.js"
+    "static/js/main.28605a27.chunk.js"
   ]
 }
