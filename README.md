@@ -56,7 +56,6 @@
   The Food-tracker-front is a capstone project based on a tracking application.
 
 ![screenshot-1](src/assets/screen1.png)
-![screenshot-1](src/assets/screen2.png)
 
 ### Built With
 This project was built using these technologies.
