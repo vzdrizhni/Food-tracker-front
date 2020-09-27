@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { getMeal } from '../../actions/actions';
 import Meal from '../Meal/meal';
 import './addmeal.css';
 
 const AddMeal = props => {
-  const { meals, getMeal } = props;
+  const { meals, getMeal, user } = props;
 
   useEffect(() => {
     getMeal([]);
@@ -26,6 +26,8 @@ const AddMeal = props => {
       .then(response => response.json())
       .then(data => getMeal(data.data.meal));
   };
+
+  if (Object.keys(user).length === 0) { return <Redirect to="/sign_in" />; }
 
   return (
     <div>
@@ -54,6 +56,7 @@ const mapDispatchToProps = dispatch => ({
 AddMeal.propTypes = {
   getMeal: PropTypes.func.isRequired,
   meals: PropTypes.instanceOf(Array).isRequired,
+  user: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddMeal);

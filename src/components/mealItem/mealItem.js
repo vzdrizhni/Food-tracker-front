@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 import { getFood, addFood } from '../../actions/actions';
 import Food from '../Food/food';
 import './mealitem.css';
 
 const MealItem = props => {
   const {
-    getFood, food, meals, addFood, match,
+    getFood, food, meals, addFood, match, user,
   } = props;
 
   const meal = meals.find(obj => obj.id == match.params.id); // eslint-disable-line eqeqeq
@@ -45,6 +46,8 @@ const MealItem = props => {
     });
   };
 
+  if (Object.keys(user).length === 0) { return <Redirect to="/sign_in" />; }
+
   return (
     <div>
       <div className="wrapper">
@@ -71,7 +74,7 @@ const MealItem = props => {
   );
 };
 
-const mapStateToProps = state => ({ meals: state.meals, food: state.food });
+const mapStateToProps = state => ({ meals: state.meals, food: state.food, user: state.user });
 
 const mapDispatchToProps = dispatch => ({
   getFood: value => dispatch(getFood(value)),
@@ -83,6 +86,7 @@ MealItem.propTypes = {
   addFood: PropTypes.func.isRequired,
   match: PropTypes.instanceOf(Object).isRequired,
   food: PropTypes.instanceOf(Object).isRequired,
+  user: PropTypes.instanceOf(Object).isRequired,
   meals: PropTypes.instanceOf(Array).isRequired,
 };
 

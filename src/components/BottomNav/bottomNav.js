@@ -26,7 +26,7 @@ const BottomNav = () => (
         <p className="progres-text">Your Progress</p>
       </div>
     </Link>
-    <Link to="more">
+    <Link to="/more">
       <div className="add-measure">
         <FontAwesomeIcon icon={faEllipsisH} />
         <p>More</p>
