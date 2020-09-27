@@ -53,7 +53,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-  The Food-tracker-front is a capstone project based on a tracking application.
+  The Food-tracker-front is a capstone project based on a tracking application. This application tracks calories consumed by user. User can create meals and food for each meal created. Each user has it's own statistics. To use the application user must be signed up and signed in. All the data stored and processed on a backe-end server.
 
 ![screenshot-1](src/assets/screen1.png)
 
