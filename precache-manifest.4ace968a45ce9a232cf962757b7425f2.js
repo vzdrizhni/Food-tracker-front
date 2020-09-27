@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ccd0af5360e036bb008b5eb49af2a8d5",
+    "revision": "38fc0e7d61ded6a6a1be1be0129aa304",
     "url": "/vzdrizhni/Food-tracker-front/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vzdrizhni/Food-tracker-front/static/css/2.f524894f.chunk.css"
   },
   {
-    "revision": "326822ca311c98a885e9",
+    "revision": "b7268d3aaa95262d6beb",
     "url": "/vzdrizhni/Food-tracker-front/static/css/main.b6187bd2.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vzdrizhni/Food-tracker-front/static/js/2.a25257bb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "326822ca311c98a885e9",
-    "url": "/vzdrizhni/Food-tracker-front/static/js/main.28605a27.chunk.js"
+    "revision": "b7268d3aaa95262d6beb",
+    "url": "/vzdrizhni/Food-tracker-front/static/js/main.2cc82c17.chunk.js"
   },
   {
     "revision": "9ca11d6d30d978f09cfe",
