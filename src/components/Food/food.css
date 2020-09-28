@@ -1,0 +1,76 @@
+.food {
+  background-color: #fff;
+  color: #92a0ae;
+  font-size: 1.5em;
+  margin: 10px 5px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.CircularProgressbar {
+  max-width: 24% !important;
+  width: 178px;
+}
+
+.calories {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #f1f1;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+  margin-right: 15px;
+  border-radius: 7px;
+}
+
+img {
+  width: 100px;
+  padding: 10px;
+  color: #60ace0;
+  display: block;
+  margin: auto;
+}
+
+.measure-wrapper {
+  display: flex;
+}
+
+.title {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 576px) {
+  .food {
+    justify-content: space-between;
+    flex-direction: column-reverse;
+  }
+
+  .food-data {
+    width: 100%;
+  }
+
+  .measure-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .calories {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .title {
+    float: left;
+    clear: both;
+    margin: -21px 0 32px;
+  }
+
+  .CircularProgressbar {
+    align-self: flex-end;
+    margin-bottom: -26px;
+    margin-right: 12px;
+    width: 18% !important;
+  }
+}

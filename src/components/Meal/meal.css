@@ -1,0 +1,18 @@
+.meal-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2em !important;
+  width: 96% !important;
+  margin: 10px auto !important;
+  padding: 0 5px !important;
+}
+
+.CircularProgressbar {
+  width: 10% !important;
+  margin-right: 0 !important;
+}
+
+.meal-bar {
+  margin-bottom: 0 !important;
+}

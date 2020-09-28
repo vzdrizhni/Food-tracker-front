@@ -1,0 +1,26 @@
+.wrapper {
+  margin: 0;
+  background-color: #f3f4f6;
+}
+
+button {
+  background-color: #42b5e8 !important;
+  color: #fff !important;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 42px;
+  font-family: 'Roboto Slab', serif;
+  white-space: nowrap;
+  height: 42px;
+  margin: 12px 5px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border: none !important;
+  border-radius: 2px;
+  vertical-align: top;
+  max-width: 25%;
+  min-width: 100px;
+  width: 200px;
+}

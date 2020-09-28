@@ -1,0 +1,44 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #313944;
+  padding: 5px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a:hover {
+  opacity: 0.5;
+}
+
+.svg-inline--fa.fa-w-14,
+.svg-inline--fa.fa-w-16 {
+  font-size: 3.5em;
+}
+
+.add-measure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.progres {
+  font-size: 2.2em;
+  padding-top: 2px;
+}
+
+.progres-text {
+  font-size: 0.75rem;
+  padding-top: 6px;
+}

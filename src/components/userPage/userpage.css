@@ -1,0 +1,28 @@
+article {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.meal-item {
+  background-color: #fff;
+  color: #92a0ae;
+  font-size: 1.5em;
+  margin: 10px 5px;
+  padding: 0 5px !important;
+  width: 100%;
+}
+
+.meals-list {
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .meal-item {
+    width: 100%;
+  }
+
+  .meals-list {
+    width: 100%;
+  }
+}
